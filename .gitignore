@@ -1,9 +1,31 @@
+# Environment
 .env
-*.db
-__pycache__/
-*.pyc
 .venv/
 venv/
-.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Database
+*.db
+*.sqlite3
+
+# Node (Playwright capture script dependencies)
+node_modules/
+package.json
+package-lock.json
+
+# IDE
 .idea/
 .vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+todolist_claude_code_prompt_v5.md
