@@ -81,22 +81,25 @@ async def update_todo(
     if not existing:
         return None
 
-    updates = []
-    params = []
-    if title is not None:
-        updates.append("title = ?")
-        params.append(title)
-    if completed is not None:
-        updates.append("completed = ?")
-        params.append(completed)
-
-    if updates:
-        params.append(todo_id)
+    if title is not None and completed is not None:
         await db.execute(
-            f"UPDATE todos SET {', '.join(updates)} WHERE id = ?",
-            params,
+            "UPDATE todos SET title = ?, completed = ? WHERE id = ?",
+            (title, completed, todo_id),
         )
-        await db.commit()
+    elif title is not None:
+        await db.execute(
+            "UPDATE todos SET title = ? WHERE id = ?",
+            (title, todo_id),
+        )
+    elif completed is not None:
+        await db.execute(
+            "UPDATE todos SET completed = ? WHERE id = ?",
+            (completed, todo_id),
+        )
+    else:
+        return existing
+
+    await db.commit()
 
     return await fetch_todo_by_id(db, todo_id)
 
