@@ -105,6 +105,12 @@ app/
 └── static/
     ├── css/style.css  # CSS 변수 기반 커스텀 스타일
     └── js/app.js      # fetch API + Optimistic UI + 인라인 편집
+
+docs/
+├── AGENT_PROMPT.md  # 자율 빌드 프롬프트 (처음부터 재현 가능)
+├── STRATEGY.md      # 설계 원칙 + LLM 하네스 방어
+├── SESSION_LOG.md   # 세션별 작업 기록
+└── screenshots/     # Playwright 캡처
 ```
 
 ## 버전 히스토리

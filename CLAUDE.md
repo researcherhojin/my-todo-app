@@ -96,7 +96,13 @@ async def test_example(client):
 - 입력 검증: Pydantic 모델에서 서버 측 검증
 
 ## Playwright 검증
-- 구현 후 반드시 Playwright MCP로 브라우저 캡처
+- 구현 후 반드시 Playwright로 브라우저 캡처
 - 스크린샷: `docs/screenshots/`에 저장
 - PR 본문에 스크린샷 첨부
 - 포트 자동 탐색: `make find-port`로 확인 후 접속
+
+## Session Log
+- 커밋 전에 `docs/SESSION_LOG.md`에 해당 세션 작업을 append
+- 형식: `# 세션 — YYYY-MM-DD` 헤더 + 타임라인/문제/커밋/교훈
+- 이전 세션 내용은 수정하지 않는다 (append only)
+- 상세 규칙: `docs/AGENT_PROMPT.md` §0.5 참조
