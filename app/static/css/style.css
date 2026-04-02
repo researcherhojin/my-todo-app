@@ -1,0 +1,35 @@
+/* Base styles */
+:root {
+    --color-bg: #FAFAFA;
+    --color-text: #1A1A1A;
+    --color-accent: #2563EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-header {
+    padding: 48px 0 32px;
+}
+
+.app-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
