@@ -9,11 +9,11 @@
 
 ## 실행 방법
 ```bash
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+uv sync
+uv run uvicorn app.main:app --reload
 ```
 
 ## 테스트
 ```bash
-pytest tests/
+uv run pytest tests/
 ```

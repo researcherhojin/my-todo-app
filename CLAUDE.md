@@ -9,11 +9,11 @@
 - Template: Jinja2
 
 ## Build & Run
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+uv sync
+uv run uvicorn app.main:app --reload
 
 ## Test
-pytest tests/
+uv run pytest tests/
 
 ## Code Rules
 - 변수명/함수명은 의미를 명확히 드러내는 영어 사용

@@ -13,6 +13,21 @@
             <h1>Todo App</h1>
         </header>
         <main id="app">
+            <form id="todo-form" class="todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    class="todo-input"
+                    placeholder="할 일을 입력하세요"
+                    autocomplete="off"
+                >
+                <button type="submit" class="todo-submit">추가</button>
+            </form>
+            <div id="todo-list-container">
+                <ul id="todo-list" class="todo-list"></ul>
+                <p id="empty-state" class="empty-state">할 일이 없습니다</p>
+                <p id="error-state" class="error-state" hidden>목록을 불러오지 못했습니다</p>
+            </div>
         </main>
     </div>
     <script src="/static/js/app.js"></script>
